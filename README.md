@@ -17,7 +17,7 @@
 
 ## Installation
 ```sh
-$ cargo add async-redis-session
+$ cargo add async-redis-session --git https://github.com/traevelliath/async-redis-session
 ```
 
 ## Safety
