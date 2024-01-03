@@ -115,7 +115,7 @@ impl RedisSessionStore {
 
 #[async_trait]
 impl SessionStore for RedisSessionStore {
-    async fn load_session(&self, cookie_value: &String) -> Result<Option<Session>> {
+    async fn load_session(&self, cookie_value: &str) -> Result<Option<Session>> {
         let id = Session::id_from_cookie_value(cookie_value)?;
         let mut connection = self.connection().await?;
         let record: Option<String> = connection.get(self.prefix_key(id)).await?;
