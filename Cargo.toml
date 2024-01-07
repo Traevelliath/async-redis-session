@@ -16,7 +16,7 @@ version = "0.24.0"
 features = ["aio", "async-std-comp"]
 
 [dependencies]
-async-session = "3.0.0"
+async-session = { git = "https://github.com/Traevelliath/async-session" }
 
 [dev-dependencies]
 async-std = { version = "1.12.0", features = ["attributes"] }
